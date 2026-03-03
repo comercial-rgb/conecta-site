@@ -70,7 +70,7 @@ ul{list-style:none}
 .nav-logo-text{font-family:var(--font-title);font-weight:800;font-size:20px;color:#fff}
 .nav-logo-text span{font-weight:600;color:var(--cs-teal-light)}
 .nav-links{display:flex;align-items:center;gap:32px}
-.nav-links a{color:rgba(255,255,255,.75);font-size:14px;font-weight:500;transition:color .2s;position:relative}
+.nav-links a{color:rgba(255,255,255,.75);font-size:14px;font-weight:500;transition:color .2s;position:relative;white-space:nowrap}
 .nav-links a::after{content:'';position:absolute;bottom:-4px;left:0;width:0;height:2px;background:var(--cs-teal);transition:width .3s}
 .nav-links a:hover{color:#fff}
 .nav-links a:hover::after{width:100%}
@@ -79,6 +79,7 @@ ul{list-style:none}
 .nav-lang button.active{background:var(--cs-teal);color:#fff;border-color:var(--cs-teal)}
 .nav-cta{padding:10px 24px;border-radius:10px;background:var(--cs-gradient-accent);color:#fff;font-weight:700;font-size:13px;font-family:var(--font-title);transition:all .2s}
 .nav-cta:hover{transform:translateY(-1px);box-shadow:0 4px 20px rgba(20,184,166,.3)}
+.nav-cta{white-space:nowrap}
 .mobile-toggle{display:none;background:none;border:none;cursor:pointer;padding:8px}
 .mobile-toggle span{display:block;width:24px;height:2px;background:#fff;margin:5px 0;transition:all .3s;border-radius:2px}
 
@@ -207,7 +208,8 @@ ul{list-style:none}
 .contact-form .form-group label{color:rgba(255,255,255,.7)}
 .contact-form .form-group input,.contact-form .form-group textarea,.contact-form .form-group select{background:rgba(255,255,255,.06);border-color:rgba(255,255,255,.1);color:#fff}
 .contact-form .form-group input::placeholder,.contact-form .form-group textarea::placeholder{color:rgba(255,255,255,.3)}
-.contact-form .form-group input:focus,.contact-form .form-group textarea:focus{border-color:var(--cs-teal)}
+.contact-form .form-group input:focus,.contact-form .form-group textarea:focus,.contact-form .form-group select:focus{border-color:var(--cs-teal)}
+.contact-form .form-group select option{color:var(--cs-ink);background:#fff}
 
 /* ===== LOGIN ===== */
 .login-section{background:var(--cs-ice)}
@@ -652,11 +654,16 @@ ul{list-style:none}
         <label data-i18n="form_segment">Segmento de Atuação</label>
         <select>
           <option data-i18n="form_seg_opt0">Selecione</option>
-          <option data-i18n="form_seg_opt1">Tecnologia</option>
-          <option data-i18n="form_seg_opt2">Infraestrutura</option>
-          <option data-i18n="form_seg_opt3">Consultoria</option>
-          <option data-i18n="form_seg_opt4">Serviços Gerais</option>
-          <option data-i18n="form_seg_opt5">Outro</option>
+          <option data-i18n="form_seg_opt1">Auto Peças</option>
+          <option data-i18n="form_seg_opt2">Mecânica</option>
+          <option data-i18n="form_seg_opt3">Supermercado</option>
+          <option data-i18n="form_seg_opt4">Farmácia</option>
+          <option data-i18n="form_seg_opt5">Posto de Combustível</option>
+          <option data-i18n="form_seg_opt6">Serviços Gerais</option>
+          <option data-i18n="form_seg_opt7">Empreiteira</option>
+          <option data-i18n="form_seg_opt8">Pedreiro</option>
+          <option data-i18n="form_seg_opt9">Eletricista</option>
+          <option data-i18n="form_seg_opt10">Outro</option>
         </select>
       </div>
       <div class="form-group">
@@ -855,7 +862,7 @@ const translations = {
     supp_form_title:'Cadastro de Fornecedor',supp_form_desc:'Preencha seus dados e entraremos em contato.',
     form_company:'Empresa',form_company_ph:'Nome da empresa',form_cnpj:'CNPJ',form_name:'Nome do Responsável',form_name_ph:'Seu nome completo',
     form_phone:'Telefone',form_segment:'Segmento de Atuação',
-    form_seg_opt0:'Selecione',form_seg_opt1:'Tecnologia',form_seg_opt2:'Infraestrutura',form_seg_opt3:'Consultoria',form_seg_opt4:'Serviços Gerais',form_seg_opt5:'Outro',
+    form_seg_opt0:'Selecione',form_seg_opt1:'Auto Peças',form_seg_opt2:'Mecânica',form_seg_opt3:'Supermercado',form_seg_opt4:'Farmácia',form_seg_opt5:'Posto de Combustível',form_seg_opt6:'Serviços Gerais',form_seg_opt7:'Empreiteira',form_seg_opt8:'Pedreiro',form_seg_opt9:'Eletricista',form_seg_opt10:'Outro',
     form_msg:'Mensagem',form_msg_ph:'Descreva seus serviços...',form_submit:'Enviar Cadastro',
     contact_label:'Contato',contact_title:'Vamos conversar sobre seu projeto?',contact_desc:'Entre em contato e descubra como a Conecta Sistemas pode transformar a gestão da sua empresa.',
     contact_addr_title:'Endereço',contact_phone_title:'Telefone',contact_phone_text:'Em breve',
@@ -917,7 +924,7 @@ const translations = {
     supp_form_title:'Supplier Registration',supp_form_desc:'Fill in your details and we will get in touch.',
     form_company:'Company',form_company_ph:'Company name',form_cnpj:'Tax ID',form_name:'Contact Name',form_name_ph:'Your full name',
     form_phone:'Phone',form_segment:'Business Segment',
-    form_seg_opt0:'Select',form_seg_opt1:'Technology',form_seg_opt2:'Infrastructure',form_seg_opt3:'Consulting',form_seg_opt4:'General Services',form_seg_opt5:'Other',
+    form_seg_opt0:'Select',form_seg_opt1:'Auto Parts',form_seg_opt2:'Mechanics',form_seg_opt3:'Supermarket',form_seg_opt4:'Pharmacy',form_seg_opt5:'Gas Station',form_seg_opt6:'General Services',form_seg_opt7:'Contractor',form_seg_opt8:'Mason',form_seg_opt9:'Electrician',form_seg_opt10:'Other',
     form_msg:'Message',form_msg_ph:'Describe your services...',form_submit:'Submit Registration',
     contact_label:'Contact',contact_title:"Let's talk about your project?",contact_desc:'Get in touch and discover how Conecta Sistemas can transform your business management.',
     contact_addr_title:'Address',contact_phone_title:'Phone',contact_phone_text:'Coming soon',
