@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="512" height="512" viewBox="0 0 512 512">
+  <defs>
+    <linearGradient id="csTech" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#071A33"></stop><stop offset="1" stop-color="#1463FF"></stop>
+    </linearGradient>
+    <linearGradient id="csTeal" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#14B8A6"></stop><stop offset="1" stop-color="#5EEAD4"></stop>
+    </linearGradient>
+  </defs>
+
+  <rect x="64" y="64" width="384" height="384" rx="84" fill="#ECFEFF"></rect>
+
+  <!-- buildings -->
+  <rect x="140" y="160" width="120" height="230" rx="14" fill="url(#csTech)"></rect>
+  <rect x="265" y="120" width="125" height="270" rx="14" fill="url(#csTeal)"></rect>
+  <g fill="#ECFEFF" opacity="0.90">
+    <rect x="160" y="185" width="22" height="22" rx="4"></rect><rect x="194" y="185" width="22" height="22" rx="4"></rect>
+    <rect x="160" y="220" width="22" height="22" rx="4"></rect><rect x="194" y="220" width="22" height="22" rx="4"></rect>
+    <rect x="160" y="255" width="22" height="22" rx="4"></rect><rect x="194" y="255" width="22" height="22" rx="4"></rect>
+    <rect x="285" y="150" width="24" height="24" rx="4"></rect><rect x="320" y="150" width="24" height="24" rx="4"></rect>
+    <rect x="285" y="188" width="24" height="24" rx="4"></rect><rect x="320" y="188" width="24" height="24" rx="4"></rect>
+  </g>
+
+  <!-- shield/check -->
+  <circle cx="372" cy="360" r="58" fill="#FFFFFF"></circle>
+  <circle cx="372" cy="360" r="46" fill="url(#csTeal)"></circle>
+  <path d="M350 360 l14 14 30-34" fill="none" stroke="#FFFFFF" stroke-width="14" stroke-linecap="round" stroke-linejoin="round"></path>
+</svg>

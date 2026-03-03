@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="512" height="512" viewBox="0 0 512 512">
+  <defs>
+    <linearGradient id="csTech" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#071A33"></stop><stop offset="1" stop-color="#1463FF"></stop>
+    </linearGradient>
+    <linearGradient id="csAccent" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#1463FF"></stop><stop offset="1" stop-color="#14B8A6"></stop>
+    </linearGradient>
+  </defs>
+
+  <rect x="64" y="64" width="384" height="384" rx="84" fill="#ECFEFF"></rect>
+  <rect x="88" y="88" width="336" height="336" rx="72" fill="url(#csTech)" opacity="0.12"></rect>
+
+  <!-- car -->
+  <path d="M150 275 h210 l36 48 v56 H114 v-56z" fill="url(#csTech)"></path>
+  <circle cx="175" cy="385" r="18" fill="#071A33"></circle>
+  <circle cx="335" cy="385" r="18" fill="#071A33"></circle>
+  <path d="M170 285 h140" stroke="#ECFEFF" stroke-width="10" stroke-linecap="round" opacity="0.55"></path>
+
+  <!-- pin -->
+  <path d="M355 165c0-28 22-50 50-50s50 22 50 50c0 40-50 98-50 98s-50-58-50-98z" fill="url(#csAccent)"></path>
+  <circle cx="405" cy="165" r="18" fill="#ECFEFF"></circle>
+</svg>

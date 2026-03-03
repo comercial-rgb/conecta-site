@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="512" height="512" viewBox="0 0 512 512">
+  <defs>
+    <linearGradient id="csBrand" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#071A33"></stop>
+      <stop offset="1" stop-color="#14B8A6"></stop>
+    </linearGradient>
+  </defs>
+
+  <g transform="translate(56,56)">
+    <path d="M300 40 A160 160 0 1 0 300 360" fill="none" stroke="url(#csBrand)" stroke-width="44" stroke-linecap="round"></path>
+    <path d="M300 74 A126 126 0 1 0 300 326" fill="none" stroke="#ECFEFF" stroke-width="14" stroke-linecap="round" opacity="0.95"></path>
+
+    <circle cx="300" cy="40" r="20" fill="#14B8A6"></circle>
+    <circle cx="140" cy="200" r="20" fill="#1463FF"></circle>
+    <circle cx="300" cy="360" r="20" fill="#071A33"></circle>
+
+    <path d="M300 40 L225 105" stroke="#ECFEFF" stroke-width="8" stroke-linecap="round" opacity="0.85"></path>
+    <path d="M140 200 L205 220" stroke="#ECFEFF" stroke-width="8" stroke-linecap="round" opacity="0.85"></path>
+    <path d="M300 360 L225 295" stroke="#ECFEFF" stroke-width="8" stroke-linecap="round" opacity="0.85"></path>
+
+    <circle cx="225" cy="105" r="10" fill="#ECFEFF"></circle>
+    <circle cx="205" cy="220" r="10" fill="#ECFEFF"></circle>
+    <circle cx="225" cy="295" r="10" fill="#ECFEFF"></circle>
+  </g>
+</svg>
