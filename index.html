@@ -115,17 +115,7 @@ ul{list-style:none}
   background:radial-gradient(circle,rgba(0,183,255,.25) 0%,transparent 70%);filter:blur(60px);animation:glowPulse 4s ease-in-out infinite}
 @keyframes glowPulse{0%,100%{opacity:.6;transform:scale(1)}50%{opacity:1;transform:scale(1.1)}}
 
-/* ===== SECTION DIVIDERS ===== */
-.section-pad{position:relative}
-.solutions::after,.about::after,.features::after,.portal::after,.clients::after,.supplier::after,.contact::after,.login-section::after{content:'';position:absolute;bottom:0;left:0;right:0;height:80px;pointer-events:none;z-index:2}
-.solutions::after{background:linear-gradient(to bottom,transparent,#fff)}
-.about::after{background:linear-gradient(to bottom,transparent,var(--cs-navy))}
-.features::after{background:linear-gradient(to bottom,transparent,#fff)}
-.portal::after{background:linear-gradient(to bottom,transparent,#1a2744)}
-.clients::after{background:linear-gradient(to bottom,transparent,#fff)}
-.supplier::after{background:linear-gradient(to bottom,transparent,var(--cs-navy))}
-.contact::after{background:linear-gradient(to bottom,transparent,var(--cs-ice))}
-.hero::after{content:'';position:absolute;bottom:0;left:0;right:0;height:80px;background:linear-gradient(to bottom,transparent,var(--cs-ice));pointer-events:none;z-index:2}
+/* ===== SECTION DIVIDERS (removed — clean transitions) ===== */
 
 /* ===== SOLUTIONS ===== */
 .solutions{background:var(--cs-ice) url('assets/images/bg-solucoes.png') center/cover no-repeat;position:relative}
