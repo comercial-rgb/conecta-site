@@ -67,7 +67,7 @@ ul{list-style:none}
 .nav-inner{display:flex;align-items:center;justify-content:space-between;padding:18px 24px;max-width:var(--container);margin:0 auto}
 .nav-logo{display:flex;align-items:center;gap:12px}
 .nav-logo svg{width:42px;height:42px}
-.nav-logo-text{font-family:var(--font-title);font-weight:800;font-size:20px;color:#fff}
+.nav-logo-text{font-family:var(--font-title);font-weight:800;font-size:22px;color:#fff}
 .nav-logo-text span{font-weight:600;color:var(--cs-teal-light)}
 .nav-links{display:flex;align-items:center;gap:32px}
 .nav-links a{color:rgba(255,255,255,.75);font-size:14px;font-weight:500;transition:color .2s;position:relative;white-space:nowrap}
@@ -104,10 +104,10 @@ ul{list-style:none}
 .hero-stat .num{font-family:var(--font-title);font-weight:800;font-size:36px;background:var(--cs-gradient-accent);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
 .hero-stat .label{font-size:13px;color:rgba(255,255,255,.45);margin-top:4px}
 .hero-visual{position:relative;display:flex;align-items:center;justify-content:center}
-.hero-symbol{width:400px;height:400px;animation:symbolFloat 6s ease-in-out infinite}
+.hero-symbol{width:550px;height:550px;animation:symbolFloat 6s ease-in-out infinite}
 @keyframes symbolFloat{0%,100%{transform:translateY(0)}50%{transform:translateY(-20px)}}
-.hero-glow{position:absolute;width:500px;height:500px;border-radius:50%;
-  background:radial-gradient(circle,rgba(0,183,255,.2) 0%,transparent 70%);filter:blur(60px);animation:glowPulse 4s ease-in-out infinite}
+.hero-glow{position:absolute;width:650px;height:650px;border-radius:50%;
+  background:radial-gradient(circle,rgba(0,183,255,.25) 0%,transparent 70%);filter:blur(60px);animation:glowPulse 4s ease-in-out infinite}
 @keyframes glowPulse{0%,100%{opacity:.6;transform:scale(1)}50%{opacity:1;transform:scale(1.1)}}
 
 /* ===== SOLUTIONS ===== */
@@ -273,11 +273,10 @@ ul{list-style:none}
 <nav class="nav" id="nav">
   <div class="nav-inner">
     <a href="#hero" class="nav-logo">
-      <img src="assets/images/icone-cores.png" alt="Engine Sistemas" style="width:42px;height:42px;object-fit:contain">
+      <img src="assets/images/icone-cores.png" alt="Engine Sistemas" style="width:48px;height:48px;object-fit:contain">
       <div class="nav-logo-text">Engine <span>Sistemas</span></div>
     </a>
     <div class="nav-links" id="navLinks">
-      <a href="#hero" data-i18n="nav_home">Início</a>
       <a href="#solutions" data-i18n="nav_solutions">Soluções</a>
       <a href="#about" data-i18n="nav_about">Sobre</a>
       <a href="#features" data-i18n="nav_features">Diferenciais</a>
@@ -330,7 +329,7 @@ ul{list-style:none}
     </div>
     <div class="hero-visual">
       <div class="hero-glow"></div>
-      <img class="hero-symbol" src="assets/images/logo-branco.png" alt="Engine Sistemas" style="width:400px;height:400px;object-fit:contain">
+      <img class="hero-symbol" src="assets/images/logo-branco.png" alt="Engine Sistemas" style="width:550px;height:550px;object-fit:contain">
     </div>
   </div>
 </section>
