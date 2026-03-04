@@ -1,0 +1,148 @@
+Manual de Marca — Engine Sistemas (guia detalhado)
+1) Essência da marca
+
+Ideia central: engenharia + tecnologia + integração de sistemas.
+
+Personalidade visual: moderna, confiável, precisa, “tech” (sem parecer genérica).
+
+Símbolo: engrenagem (engenharia/processos) + “E” (Engine) + circuitos (sistemas/conectividade).
+
+2) Assinaturas oficiais (lockups)
+
+Use sempre uma destas composições:
+
+Assinatura principal (Horizontal): símbolo acima (ou ao lado, dependendo do layout) + Engine (destaque) + Sistemas (apoio).
+
+Assinatura vertical: símbolo em cima, textos empilhados.
+
+Somente símbolo: para app, favicon, botões e áreas pequenas.
+
+Monocromática: 1 cor sólida (UI, impressão econômica, gravação/recorte).
+
+Negativa: branco (ou claro) sobre fundo escuro.
+
+Regra: não altere a relação entre símbolo e textos (proporção e espaçamentos).
+
+3) Construção e proporções
+
+Módulo base (u): use o diâmetro de um “nó” (bolinha) do circuito como unidade.
+
+Espessura de traço: manter consistente (o “DNA” do logo é o mesmo peso de linha no “E” e nas trilhas).
+
+Cantos/terminações: preferir arredondamentos discretos e nós circulares (não pontudos).
+
+4) Área de proteção (respiro obrigatório)
+
+Ao redor do logo completo, manter no mínimo 2u livres (sem textos, bordas, ícones ou fotos).
+
+Para “somente símbolo”, manter 1,5u ao redor.
+
+5) Tamanho mínimo
+
+Para garantir leitura:
+
+Logo completo (digital): mínimo 120 px de largura.
+
+Logo completo (impressão): mínimo 25 mm de largura.
+
+Somente símbolo (digital):
+
+ideal: 48 px+
+
+mínimo absoluto: 24 px (preferir versão simplificada sem detalhes muito finos).
+
+6) Cores oficiais (sugestão pronta para padronizar)
+
+(Ajuste fino pode ser feito com conta-gotas no arquivo final, mas aqui já vai uma base consistente.)
+
+Ciano (primária): #00B7FF
+
+Azul profundo: #0A2E7A
+
+Âmbar (acento): #FFC84A
+
+Fundo escuro: #0B1020
+
+Branco: #FFFFFF
+
+Cinza neutro: #6C757D
+
+Gradiente oficial (principal):
+
+Direção esquerda → direita (ciano/azul no símbolo, indo para âmbar nos circuitos).
+
+Evitar gradiente no texto pequeno (ex.: “Sistemas”) quando em tamanhos reduzidos.
+
+7) Tipografia (sistema recomendado)
+
+Para manter o visual “tech” e legível:
+
+Engine (título): família sans arredondada, peso SemiBold/Bold.
+
+Sistemas (subtítulo): mesma família ou complementar, peso Medium, tracking levemente maior.
+
+Sugestões fáceis (Google Fonts):
+
+Principal: Poppins (Engine: SemiBold | Sistemas: Medium)
+
+Alternativa tech: Exo 2 (bom para UI e títulos)
+
+Regras: não esticar, não condensar manualmente, manter kerning limpo.
+
+8) Fundos e contraste
+
+Preferencial: fundos escuros (navy/black) com o logo colorido.
+
+Em fundo claro: usar versão “light” (azuis mais sólidos) e reduzir brilho.
+
+Em fotos/arte muito carregada: aplicar uma tarja (fundo sólido com opacidade) ou usar versão monocromática.
+
+9) Efeitos (quando usar glow)
+
+Glow/Neon: permitido em marketing, capa, hero do site, banners.
+
+Sem glow: recomendado para sistemas, dashboards, telas internas, impressos pequenos (mais limpo e profissional).
+
+10) Padrões gráficos (elementos de apoio)
+
+Você pode criar um “universo visual” consistente usando:
+
+Linhas de circuito em baixa opacidade (5–12%).
+
+Pontos/nós como textura.
+
+Faixas de luz horizontais sutis para headers.
+
+Bokeh/partículas bem discretas (evitar “poluição”).
+
+11) Ícone de app e software
+
+Formato: quadrado com cantos arredondados.
+
+Margem interna: ~14% (o símbolo não pode encostar).
+
+Preferir somente símbolo (sem “Engine Sistemas” em tamanhos pequenos).
+
+12) Usos indevidos (não fazer)
+
+Trocar as cores por outras aleatórias (especialmente no gradiente).
+
+Alterar espessura dos traços (engrenagem e circuitos precisam “casar”).
+
+Reposicionar “Sistemas” para longe do conjunto.
+
+Aplicar sombra pesada, bevel exagerado ou textura “metal”.
+
+Colocar o logo em fundo de baixa legibilidade sem tarja.
+
+13) Pacote de arquivos recomendado (para produção)
+
+SVG: logo principal + monocromático + somente símbolo.
+
+PDF vetorial: impressão.
+
+PNG (fundo transparente): 4096 px, 2048 px, 1024 px.
+
+App icon: 1024, 512, 256, 128.
+
+Favicon: 48, 32, 16.

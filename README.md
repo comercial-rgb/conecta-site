@@ -1,9 +1,9 @@
-# 🌐 Conecta Sistemas — Site Institucional
+# 🌐 Engine Sistemas — Site Institucional
 
-> **Conecta Sistemas — Gestão Inteligente**  
+> **Engine Sistemas — Gestão Inteligente**  
 > Site institucional da MS Frotas Administradora de Benefícios LTDA
 
-![Conecta Sistemas](assets/icons/conecta-logo-stacked.svg)
+![Engine Sistemas](assets/images/logo-cores.png)
 
 ---
 
