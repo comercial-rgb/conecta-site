@@ -235,13 +235,58 @@ ul{list-style:none}
 .contact-form .form-group input:focus,.contact-form .form-group textarea:focus,.contact-form .form-group select:focus{border-color:var(--cs-teal)}
 .contact-form .form-group select option{color:var(--cs-ink);background:#fff}
 
-/* ===== LOGIN ===== */
-.login-section{background:var(--cs-ice)}
-.login-card{max-width:440px;margin:0 auto;background:#fff;border-radius:24px;padding:40px;box-shadow:0 10px 40px rgba(11,16,32,.08)}
-.login-card h3{font-family:var(--font-title);font-weight:800;font-size:24px;color:var(--cs-navy);text-align:center;margin-bottom:8px}
-.login-card p{font-size:14px;color:var(--cs-slate);text-align:center;margin-bottom:28px}
-.login-divider{display:flex;align-items:center;gap:16px;margin:20px 0;color:var(--cs-slate);font-size:13px}
-.login-divider::before,.login-divider::after{content:'';flex:1;height:1px;background:var(--cs-line)}
+/* ===== PLANOS / PRICING ===== */
+.planos{background:var(--cs-ice);position:relative}
+.planos::before{content:'';position:absolute;inset:0;background:url('assets/images/bg-solucoes.png') center/cover no-repeat;opacity:.2;pointer-events:none}
+.planos .container{position:relative;z-index:1}
+.planos-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(340px,1fr));gap:24px;margin-top:48px}
+.plano-module{background:#fff;border-radius:24px;border:1px solid var(--cs-line);overflow:hidden;transition:all .4s}
+.plano-module:hover{box-shadow:0 16px 50px rgba(11,16,32,.08);border-color:transparent}
+.plano-module.active{border-color:var(--cs-teal);box-shadow:0 16px 50px rgba(0,183,255,.12)}
+.plano-module-header{padding:28px 28px 24px;cursor:pointer;display:flex;align-items:center;gap:20px;position:relative}
+.plano-module-icon{width:56px;height:56px;border-radius:16px;background:var(--cs-gradient-accent);display:flex;align-items:center;justify-content:center;flex-shrink:0}
+.plano-module-icon svg{width:28px;height:28px;stroke:#fff;fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+.plano-module-info{flex:1}
+.plano-module-info h3{font-family:var(--font-title);font-weight:700;font-size:18px;color:var(--cs-navy);margin-bottom:4px}
+.plano-module-info p{font-size:13px;color:var(--cs-slate);line-height:1.5}
+.plano-module-arrow{width:32px;height:32px;border-radius:50%;background:var(--cs-ice);display:flex;align-items:center;justify-content:center;flex-shrink:0;transition:all .3s}
+.plano-module-arrow svg{width:18px;height:18px;stroke:var(--cs-slate);fill:none;stroke-width:2.5;transition:transform .3s}
+.plano-module.active .plano-module-arrow{background:var(--cs-teal)}
+.plano-module.active .plano-module-arrow svg{stroke:#fff;transform:rotate(180deg)}
+.plano-module-status{display:inline-block;padding:4px 12px;border-radius:100px;font-size:11px;font-weight:700;font-family:var(--font-title);letter-spacing:.04em;margin-top:6px}
+.plano-module-status.available{background:rgba(16,185,129,.1);color:#10B981}
+.plano-module-status.soon{background:rgba(255,200,74,.15);color:#B8860B}
+.plano-module-body{max-height:0;overflow:hidden;transition:max-height .5s cubic-bezier(.25,.46,.45,.94)}
+.plano-module.active .plano-module-body{max-height:2000px}
+.plano-module-content{padding:0 28px 32px}
+.plano-divider{width:100%;height:1px;background:var(--cs-line);margin-bottom:24px}
+.plano-tiers{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:16px;margin-bottom:20px}
+.plano-tier{background:var(--cs-ice);border-radius:16px;padding:20px;border:2px solid transparent;transition:all .3s;position:relative}
+.plano-tier:hover{border-color:var(--cs-teal)}
+.plano-tier.featured{border-color:var(--cs-teal);background:rgba(0,183,255,.04)}
+.plano-tier-badge{position:absolute;top:-10px;right:12px;padding:3px 10px;border-radius:100px;background:var(--cs-gradient-accent);color:#fff;font-size:10px;font-weight:700;font-family:var(--font-title);letter-spacing:.04em;text-transform:uppercase}
+.plano-tier-name{font-family:var(--font-title);font-weight:700;font-size:14px;color:var(--cs-navy);margin-bottom:2px}
+.plano-tier-for{font-size:11px;color:var(--cs-teal);font-weight:600;margin-bottom:12px}
+.plano-tier-price{display:flex;align-items:baseline;gap:2px;margin-bottom:4px}
+.plano-tier-price .currency{font-family:var(--font-title);font-weight:600;font-size:13px;color:var(--cs-navy)}
+.plano-tier-price .amount{font-family:var(--font-title);font-weight:800;font-size:32px;color:var(--cs-navy);line-height:1}
+.plano-tier-price .period{font-size:12px;color:var(--cs-slate)}
+.plano-tier-annual{font-size:11px;color:#10B981;font-weight:600;margin-bottom:12px}
+.plano-tier-features{display:flex;flex-direction:column;gap:6px}
+.plano-tier-feat{display:flex;align-items:center;gap:6px;font-size:12px;color:var(--cs-ink)}
+.plano-tier-feat svg{width:14px;height:14px;flex-shrink:0}
+.plano-tier-feat .ck{stroke:#10B981;fill:none;stroke-width:2.5}
+.plano-tier-feat .no{stroke:var(--cs-line);fill:none;stroke-width:2;opacity:.6}
+.plano-tier-cta{margin-top:14px}
+.plano-tier-cta .btn{width:100%;justify-content:center;padding:10px 16px;font-size:13px;border-radius:10px}
+.plano-module-footer{display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:12px;margin-top:8px;padding-top:16px;border-top:1px solid var(--cs-line)}
+.plano-module-footer a{display:inline-flex;align-items:center;gap:6px;font-family:var(--font-title);font-weight:700;font-size:13px;color:var(--cs-teal);transition:all .2s}
+.plano-module-footer a:hover{color:var(--cs-blue)}
+.plano-module-footer a svg{width:16px;height:16px;stroke:currentColor;fill:none;stroke-width:2.5}
+@media(max-width:768px){
+  .plano-tiers{grid-template-columns:1fr}
+  .planos-grid{grid-template-columns:1fr}
+}
 
 /* ===== FOOTER ===== */
 .footer{background:var(--cs-ink);padding:60px 0 30px;color:rgba(255,255,255,.45)}
@@ -307,7 +352,7 @@ ul{list-style:none}
       <a href="#portal" data-i18n="nav_portal">Portal do Cliente</a>
       <a href="#supplier" data-i18n="nav_supplier">Fornecedor</a>
       <a href="#contact" data-i18n="nav_contact">Contato</a>
-      <a href="#login" data-i18n="nav_login">Login</a>
+      <a href="#planos" data-i18n="nav_planos">Planos</a>
       <div class="nav-lang">
         <button class="active" onclick="setLang('pt')">PT</button>
         <button onclick="setLang('en')">EN</button>
@@ -397,6 +442,7 @@ ul{list-style:none}
           <span class="sol-feature" data-i18n="sol_imoveis_f3">Inquilinos</span>
           <span class="sol-feature" data-i18n="sol_imoveis_f4">Analytics</span>
         </div>
+        <a href="gestao-imobiliaria.html" style="display:inline-flex;align-items:center;gap:6px;margin-top:16px;font-family:var(--font-title);font-weight:700;font-size:13px;color:var(--cs-teal);transition:all .2s">Ver Planos & Preços <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M5 12h14"/><path d="M12 5l7 7-7 7"/></svg></a>
       </div>
 
       <!-- Restaurantes -->
@@ -770,28 +816,259 @@ ul{list-style:none}
   </div>
 </section>
 
-<!-- ===== LOGIN ===== -->
-<section class="login-section section-pad" id="login">
+<!-- ===== PLANOS ===== -->
+<section class="planos section-pad" id="planos">
   <div class="container">
-    <div class="login-card reveal">
-      <div style="display:flex;justify-content:center;margin-bottom:20px">
-        <img src="assets/images/icone-cores.png" alt="Engine Sistemas" style="width:200px;height:200px;object-fit:contain">
+    <div class="text-center">
+      <div class="section-label reveal" data-i18n="planos_label">Planos & Precificação</div>
+      <h2 class="section-title reveal" data-i18n="planos_title">Escolha a solução ideal para o seu negócio</h2>
+      <p class="section-subtitle reveal" style="margin:0 auto" data-i18n="planos_desc">Cada módulo possui planos independentes. Clique para ver preços, funcionalidades e começar seu teste grátis.</p>
+    </div>
+    <div class="planos-grid">
+
+      <!-- GESTÃO IMOBILIÁRIA -->
+      <div class="plano-module reveal" id="mod-imobiliaria">
+        <div class="plano-module-header" onclick="toggleModule('mod-imobiliaria')">
+          <div class="plano-module-icon">
+            <svg viewBox="0 0 24 24"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+          </div>
+          <div class="plano-module-info">
+            <h3>Gestão Imobiliária</h3>
+            <p>Contratos, cobranças, app mobile, portal do inquilino e 6 módulos de IA nativa.</p>
+            <span class="plano-module-status available">✓ Disponível</span>
+          </div>
+          <div class="plano-module-arrow"><svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg></div>
+        </div>
+        <div class="plano-module-body">
+          <div class="plano-module-content">
+            <div class="plano-divider"></div>
+            <div class="plano-tiers">
+              <div class="plano-tier">
+                <div class="plano-tier-name">Starter</div>
+                <div class="plano-tier-for">Investidor & autônomo</div>
+                <div class="plano-tier-price">
+                  <span class="currency">R$</span>
+                  <span class="amount">97</span>
+                  <span class="period">/mês</span>
+                </div>
+                <div class="plano-tier-annual">R$82/mês no anual</div>
+                <div class="plano-tier-features">
+                  <div class="plano-tier-feat"><svg viewBox="0 0 24 24"><polyline class="ck" points="20 6 9 17 4 12"/></svg> Até 15 imóveis</div>
+                  <div class="plano-tier-feat"><svg viewBox="0 0 24 24"><polyline class="ck" points="20 6 9 17 4 12"/></svg> 1 usuário</div>
+                  <div class="plano-tier-feat"><svg viewBox="0 0 24 24"><polyline class="ck" points="20 6 9 17 4 12"/></svg> App mobile</div>
+                  <div class="plano-tier-feat"><svg viewBox="0 0 24 24"><polyline class="ck" points="20 6 9 17 4 12"/></svg> Financeiro básico</div>
+                  <div class="plano-tier-feat"><svg viewBox="0 0 24 24"><polyline class="ck" points="20 6 9 17 4 12"/></svg> Contratos e parcelas</div>
+                  <div class="plano-tier-feat"><svg viewBox="0 0 24 24"><line class="no" x1="18" y1="6" x2="6" y2="18"/><line class="no" x1="6" y1="6" x2="18" y2="18"/></svg> IA não inclusa</div>
+                </div>
+                <div class="plano-tier-cta"><a href="gestao-imobiliaria.html" class="btn btn-dark" style="font-size:13px">Ver Detalhes</a></div>
+              </div>
+              <div class="plano-tier">
+                <div class="plano-tier-name">Básico</div>
+                <div class="plano-tier-for">Imobiliária pequena</div>
+                <div class="plano-tier-price">
+                  <span class="currency">R$</span>
+                  <span class="amount">197</span>
+                  <span class="period">/mês</span>
+                </div>
+                <div class="plano-tier-annual">R$167/mês no anual</div>
+                <div class="plano-tier-features">
+                  <div class="plano-tier-feat"><svg viewBox="0 0 24 24"><polyline class="ck" points="20 6 9 17 4 12"/></svg> Até 50 imóveis</div>
+                  <div class="plano-tier-feat"><svg viewBox="0 0 24 24"><polyline class="ck" points="20 6 9 17 4 12"/></svg> 3 usuários</div>
+                  <div class="plano-tier-feat"><svg viewBox="0 0 24 24"><polyline class="ck" points="20 6 9 17 4 12"/></svg> Portal do inquilino</div>
+                  <div class="plano-tier-feat"><svg viewBox="0 0 24 24"><polyline class="ck" points="20 6 9 17 4 12"/></svg> IA: Precificação</div>
+                  <div class="plano-tier-feat"><svg viewBox="0 0 24 24"><polyline class="ck" points="20 6 9 17 4 12"/></svg> IA: Anúncios</div>
+                  <div class="plano-tier-feat"><svg viewBox="0 0 24 24"><polyline class="ck" points="20 6 9 17 4 12"/></svg> Financeiro completo</div>
+                </div>
+                <div class="plano-tier-cta"><a href="gestao-imobiliaria.html" class="btn btn-dark" style="font-size:13px">Teste Grátis 14 Dias</a></div>
+              </div>
+              <div class="plano-tier featured">
+                <span class="plano-tier-badge">Mais Popular</span>
+                <div class="plano-tier-name">Profissional</div>
+                <div class="plano-tier-for">Imobiliária média</div>
+                <div class="plano-tier-price">
+                  <span class="currency">R$</span>
+                  <span class="amount">397</span>
+                  <span class="period">/mês</span>
+                </div>
+                <div class="plano-tier-annual">R$337/mês no anual</div>
+                <div class="plano-tier-features">
+                  <div class="plano-tier-feat"><svg viewBox="0 0 24 24"><polyline class="ck" points="20 6 9 17 4 12"/></svg> Até 200 imóveis</div>
+                  <div class="plano-tier-feat"><svg viewBox="0 0 24 24"><polyline class="ck" points="20 6 9 17 4 12"/></svg> 10 usuários</div>
+                  <div class="plano-tier-feat"><svg viewBox="0 0 24 24"><polyline class="ck" points="20 6 9 17 4 12"/></svg> IA Completa (6 módulos)</div>
+                  <div class="plano-tier-feat"><svg viewBox="0 0 24 24"><polyline class="ck" points="20 6 9 17 4 12"/></svg> CRM / Leads pipeline</div>
+                  <div class="plano-tier-feat"><svg viewBox="0 0 24 24"><polyline class="ck" points="20 6 9 17 4 12"/></svg> Suporte prioritário</div>
+                  <div class="plano-tier-feat"><svg viewBox="0 0 24 24"><polyline class="ck" points="20 6 9 17 4 12"/></svg> Relatórios avançados</div>
+                </div>
+                <div class="plano-tier-cta"><a href="gestao-imobiliaria.html" class="btn btn-primary" style="font-size:13px">Teste Grátis 14 Dias</a></div>
+              </div>
+              <div class="plano-tier">
+                <div class="plano-tier-name">Enterprise</div>
+                <div class="plano-tier-for">Administradoras</div>
+                <div class="plano-tier-price">
+                  <span class="currency">R$</span>
+                  <span class="amount">797</span>
+                  <span class="period">/mês</span>
+                </div>
+                <div class="plano-tier-annual">R$677/mês no anual</div>
+                <div class="plano-tier-features">
+                  <div class="plano-tier-feat"><svg viewBox="0 0 24 24"><polyline class="ck" points="20 6 9 17 4 12"/></svg> Imóveis ilimitados</div>
+                  <div class="plano-tier-feat"><svg viewBox="0 0 24 24"><polyline class="ck" points="20 6 9 17 4 12"/></svg> Usuários ilimitados</div>
+                  <div class="plano-tier-feat"><svg viewBox="0 0 24 24"><polyline class="ck" points="20 6 9 17 4 12"/></svg> API REST</div>
+                  <div class="plano-tier-feat"><svg viewBox="0 0 24 24"><polyline class="ck" points="20 6 9 17 4 12"/></svg> White-label disponível</div>
+                  <div class="plano-tier-feat"><svg viewBox="0 0 24 24"><polyline class="ck" points="20 6 9 17 4 12"/></svg> SLA 4h dedicado</div>
+                  <div class="plano-tier-feat"><svg viewBox="0 0 24 24"><polyline class="ck" points="20 6 9 17 4 12"/></svg> Onboarding dedicado</div>
+                </div>
+                <div class="plano-tier-cta"><a href="gestao-imobiliaria.html" class="btn btn-dark" style="font-size:13px">Falar com Consultor</a></div>
+              </div>
+            </div>
+            <div class="plano-module-footer">
+              <a href="gestao-imobiliaria.html">Ver página completa com todas as funcionalidades <svg viewBox="0 0 24 24" stroke-linecap="round"><path d="M5 12h14"/><path d="M12 5l7 7-7 7"/></svg></a>
+              <span style="font-size:12px;color:var(--cs-slate)">✓ 14 dias grátis · ✓ Garantia 30 dias · ✓ Sem cartão no trial</span>
+            </div>
+          </div>
+        </div>
       </div>
-      <h3 data-i18n="login_title">Acesse sua conta</h3>
-      <p data-i18n="login_desc">Entre com suas credenciais para acessar o painel.</p>
-      <div class="form-group">
-        <label>E-mail</label>
-        <input type="email" placeholder="seu@email.com">
+
+      <!-- GESTÃO DE FROTAS -->
+      <div class="plano-module reveal reveal-delay-1" id="mod-frotas">
+        <div class="plano-module-header" onclick="toggleModule('mod-frotas')">
+          <div class="plano-module-icon">
+            <svg viewBox="0 0 24 24"><circle cx="7" cy="17" r="2"/><circle cx="17" cy="17" r="2"/><path d="M5 17H3v-6l2-5h9l4 5h3v6h-2"/><path d="M5 12h14"/></svg>
+          </div>
+          <div class="plano-module-info">
+            <h3>Gestão de Frotas</h3>
+            <p>Manutenção, abastecimento, rastreamento veicular, ordens de serviço e controle de custos.</p>
+            <span class="plano-module-status soon">Em breve</span>
+          </div>
+          <div class="plano-module-arrow"><svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg></div>
+        </div>
+        <div class="plano-module-body">
+          <div class="plano-module-content">
+            <div class="plano-divider"></div>
+            <div style="text-align:center;padding:24px 0">
+              <div style="width:64px;height:64px;border-radius:50%;background:var(--cs-ice);display:flex;align-items:center;justify-content:center;margin:0 auto 16px">
+                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="var(--cs-amber)" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
+              </div>
+              <h4 style="font-family:var(--font-title);font-weight:700;font-size:18px;color:var(--cs-navy);margin-bottom:8px">Precificação em breve</h4>
+              <p style="font-size:14px;color:var(--cs-slate);max-width:400px;margin:0 auto 20px">Estamos finalizando os planos para Gestão de Frotas. Deixe seu contato e seja notificado em primeira mão com condições especiais de lançamento.</p>
+              <a href="#contact" class="btn btn-dark" style="font-size:13px" onclick="document.getElementById('mod-frotas').classList.remove('active')">Avise-me no Lançamento</a>
+            </div>
+          </div>
+        </div>
       </div>
-      <div class="form-group">
-        <label data-i18n="login_pass">Senha</label>
-        <input type="password" placeholder="••••••••">
+
+      <!-- GESTÃO DE RESTAURANTES -->
+      <div class="plano-module reveal reveal-delay-2" id="mod-restaurantes">
+        <div class="plano-module-header" onclick="toggleModule('mod-restaurantes')">
+          <div class="plano-module-icon">
+            <svg viewBox="0 0 24 24"><path d="M18 8h1a4 4 0 010 8h-1"/><path d="M2 8h16v9a4 4 0 01-4 4H6a4 4 0 01-4-4V8z"/><line x1="6" y1="1" x2="6" y2="4"/><line x1="10" y1="1" x2="10" y2="4"/><line x1="14" y1="1" x2="14" y2="4"/></svg>
+          </div>
+          <div class="plano-module-info">
+            <h3>Gestão de Restaurantes</h3>
+            <p>Comandas, KDS, estoque, cardápio digital e relatórios de vendas com IA.</p>
+            <span class="plano-module-status soon">Em breve</span>
+          </div>
+          <div class="plano-module-arrow"><svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg></div>
+        </div>
+        <div class="plano-module-body">
+          <div class="plano-module-content">
+            <div class="plano-divider"></div>
+            <div style="text-align:center;padding:24px 0">
+              <div style="width:64px;height:64px;border-radius:50%;background:var(--cs-ice);display:flex;align-items:center;justify-content:center;margin:0 auto 16px">
+                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="var(--cs-amber)" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
+              </div>
+              <h4 style="font-family:var(--font-title);font-weight:700;font-size:18px;color:var(--cs-navy);margin-bottom:8px">Precificação em breve</h4>
+              <p style="font-size:14px;color:var(--cs-slate);max-width:400px;margin:0 auto 20px">Em breve divulgaremos os planos para Restaurantes. Cadastre-se para receber condições exclusivas de lançamento.</p>
+              <a href="#contact" class="btn btn-dark" style="font-size:13px" onclick="document.getElementById('mod-restaurantes').classList.remove('active')">Avise-me no Lançamento</a>
+            </div>
+          </div>
+        </div>
       </div>
-      <button class="btn btn-primary" style="width:100%;justify-content:center;margin-top:8px" data-i18n="login_btn">Entrar</button>
-      <div class="login-divider"><span data-i18n="login_or">ou</span></div>
-      <p style="text-align:center;font-size:14px;color:var(--cs-slate)">
-        <span data-i18n="login_forgot">Esqueceu a senha?</span> <a href="#" style="color:var(--cs-blue);font-weight:600" data-i18n="login_recover">Recuperar acesso</a>
-      </p>
+
+      <!-- GESTÃO DE MERCADOS -->
+      <div class="plano-module reveal" id="mod-mercados">
+        <div class="plano-module-header" onclick="toggleModule('mod-mercados')">
+          <div class="plano-module-icon">
+            <svg viewBox="0 0 24 24"><circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/><path d="M1 1h4l2.68 13.39a2 2 0 002 1.61h9.72a2 2 0 002-1.61L23 6H6"/></svg>
+          </div>
+          <div class="plano-module-info">
+            <h3>Gestão de Mercados</h3>
+            <p>PDV, estoque, fornecedores, precificação e gestão fiscal para supermercados e varejo.</p>
+            <span class="plano-module-status soon">Em breve</span>
+          </div>
+          <div class="plano-module-arrow"><svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg></div>
+        </div>
+        <div class="plano-module-body">
+          <div class="plano-module-content">
+            <div class="plano-divider"></div>
+            <div style="text-align:center;padding:24px 0">
+              <div style="width:64px;height:64px;border-radius:50%;background:var(--cs-ice);display:flex;align-items:center;justify-content:center;margin:0 auto 16px">
+                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="var(--cs-amber)" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
+              </div>
+              <h4 style="font-family:var(--font-title);font-weight:700;font-size:18px;color:var(--cs-navy);margin-bottom:8px">Precificação em breve</h4>
+              <p style="font-size:14px;color:var(--cs-slate);max-width:400px;margin:0 auto 20px">Os planos para Gestão de Mercados estão sendo definidos. Cadastre-se para ser notificado com preços especiais.</p>
+              <a href="#contact" class="btn btn-dark" style="font-size:13px" onclick="document.getElementById('mod-mercados').classList.remove('active')">Avise-me no Lançamento</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- GESTÃO DE CONDOMÍNIOS -->
+      <div class="plano-module reveal reveal-delay-1" id="mod-condominios">
+        <div class="plano-module-header" onclick="toggleModule('mod-condominios')">
+          <div class="plano-module-icon">
+            <svg viewBox="0 0 24 24"><rect x="4" y="2" width="16" height="20" rx="2"/><line x1="9" y1="6" x2="9" y2="6"/><line x1="15" y1="6" x2="15" y2="6"/><line x1="9" y1="10" x2="9" y2="10"/><line x1="15" y1="10" x2="15" y2="10"/><line x1="9" y1="14" x2="9" y2="14"/><line x1="15" y1="14" x2="15" y2="14"/><path d="M9 18h6"/></svg>
+          </div>
+          <div class="plano-module-info">
+            <h3>Gestão de Condomínios</h3>
+            <p>Assembleias, cobranças, manutenção, reservas de áreas comuns e comunicação com moradores.</p>
+            <span class="plano-module-status soon">Em breve</span>
+          </div>
+          <div class="plano-module-arrow"><svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg></div>
+        </div>
+        <div class="plano-module-body">
+          <div class="plano-module-content">
+            <div class="plano-divider"></div>
+            <div style="text-align:center;padding:24px 0">
+              <div style="width:64px;height:64px;border-radius:50%;background:var(--cs-ice);display:flex;align-items:center;justify-content:center;margin:0 auto 16px">
+                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="var(--cs-amber)" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
+              </div>
+              <h4 style="font-family:var(--font-title);font-weight:700;font-size:18px;color:var(--cs-navy);margin-bottom:8px">Precificação em breve</h4>
+              <p style="font-size:14px;color:var(--cs-slate);max-width:400px;margin:0 auto 20px">Em breve os planos para Condomínios estarão disponíveis. Cadastre-se e garanta condições de lançamento.</p>
+              <a href="#contact" class="btn btn-dark" style="font-size:13px" onclick="document.getElementById('mod-condominios').classList.remove('active')">Avise-me no Lançamento</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- APLICATIVOS PERSONALIZADOS -->
+      <div class="plano-module reveal reveal-delay-2" id="mod-apps">
+        <div class="plano-module-header" onclick="toggleModule('mod-apps')">
+          <div class="plano-module-icon">
+            <svg viewBox="0 0 24 24"><rect x="5" y="2" width="14" height="20" rx="2"/><line x1="12" y1="18" x2="12" y2="18"/></svg>
+          </div>
+          <div class="plano-module-info">
+            <h3>Aplicativos Personalizados</h3>
+            <p>Apps mobile e web sob medida. Integração com APIs, dashboards e experiência premium.</p>
+            <span class="plano-module-status soon">Sob consulta</span>
+          </div>
+          <div class="plano-module-arrow"><svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg></div>
+        </div>
+        <div class="plano-module-body">
+          <div class="plano-module-content">
+            <div class="plano-divider"></div>
+            <div style="text-align:center;padding:24px 0">
+              <div style="width:64px;height:64px;border-radius:50%;background:var(--cs-ice);display:flex;align-items:center;justify-content:center;margin:0 auto 16px">
+                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="var(--cs-teal)" stroke-width="2" stroke-linecap="round"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg>
+              </div>
+              <h4 style="font-family:var(--font-title);font-weight:700;font-size:18px;color:var(--cs-navy);margin-bottom:8px">Projeto Sob Medida</h4>
+              <p style="font-size:14px;color:var(--cs-slate);max-width:400px;margin:0 auto 20px">Aplicativos personalizados são orçados individualmente de acordo com escopo, complexidade e prazo. Entre em contato para uma proposta.</p>
+              <a href="#contact" class="btn btn-primary" style="font-size:13px" onclick="document.getElementById('mod-apps').classList.remove('active')">Solicitar Orçamento</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
     </div>
   </div>
 </section>
@@ -810,7 +1087,7 @@ ul{list-style:none}
       <div class="footer-col">
         <h4 data-i18n="footer_solutions">Soluções</h4>
         <a href="#solutions" data-i18n="sol_frotas_title">Gestão de Frotas</a>
-        <a href="#solutions" data-i18n="sol_imoveis_title">Gestão Imobiliária</a>
+        <a href="gestao-imobiliaria.html">Gestão Imobiliária — Planos</a>
         <a href="#solutions" data-i18n="sol_rest_title">Gestão de Restaurantes</a>
         <a href="#solutions" data-i18n="sol_merc_title">Gestão de Mercados</a>
         <a href="#solutions" data-i18n="sol_cond_title">Gestão de Condomínios</a>
@@ -825,7 +1102,7 @@ ul{list-style:none}
       <div class="footer-col">
         <h4 data-i18n="footer_access">Acesso</h4>
         <a href="#portal" data-i18n="nav_portal">Portal do Cliente</a>
-        <a href="#login" data-i18n="nav_login">Login</a>
+        <a href="#planos" data-i18n="nav_planos">Planos & Preços</a>
         <a href="#contact" data-i18n="nav_contact">Contato</a>
       </div>
     </div>
@@ -841,8 +1118,9 @@ ul{list-style:none}
 const translations = {
   pt: {
     nav_home:'Início',nav_solutions:'Soluções',nav_about:'Sobre',nav_features:'Diferenciais',
-    nav_portal:'Portal do Cliente',nav_supplier:'Fornecedor',nav_contact:'Contato',nav_login:'Login',
+    nav_portal:'Portal do Cliente',nav_supplier:'Fornecedor',nav_contact:'Contato',nav_planos:'Planos',
     nav_cta:'Fale Conosco',
+    planos_label:'Planos & Precificação',planos_title:'Escolha a solução ideal para o seu negócio',planos_desc:'Cada módulo possui planos independentes. Clique para ver preços, funcionalidades e começar seu teste grátis.',
     hero_badge:'Software & Tecnologia',
     hero_title:'Tecnologia que <span class="accent">impulsiona</span> sua gestão ao futuro',
     hero_desc:'Soluções inteligentes em gestão de frotas, imóveis, restaurantes, mercados, condomínios e mais. Projetos sob medida para empresas públicas e privadas em todo o Brasil.',
@@ -903,8 +1181,9 @@ const translations = {
   },
   en: {
     nav_home:'Home',nav_solutions:'Solutions',nav_about:'About',nav_features:'Why Us',
-    nav_portal:'Client Portal',nav_supplier:'Suppliers',nav_contact:'Contact',nav_login:'Login',
+    nav_portal:'Client Portal',nav_supplier:'Suppliers',nav_contact:'Contact',nav_planos:'Plans',
     nav_cta:'Get in Touch',
+    planos_label:'Plans & Pricing',planos_title:'Choose the ideal solution for your business',planos_desc:'Each module has independent plans. Click to see prices, features, and start your free trial.',
     hero_badge:'Software & Technology',
     hero_title:'Technology that <span class="accent">powers</span> your management to the future',
     hero_desc:'Smart solutions for fleet, real estate, restaurant, market, and condominium management. Tailor-made projects for public and private companies across Brazil.',
@@ -1044,6 +1323,27 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     if (target) target.scrollIntoView({ behavior: 'smooth', block: 'start' });
   });
 });
+
+// ===== MODULE TOGGLE (Planos) =====
+function toggleModule(id) {
+  const el = document.getElementById(id);
+  if (!el) return;
+  const wasActive = el.classList.contains('active');
+  // Close all modules
+  document.querySelectorAll('.plano-module').forEach(m => m.classList.remove('active'));
+  // Toggle current
+  if (!wasActive) {
+    el.classList.add('active');
+    // Scroll into view with offset
+    setTimeout(() => {
+      const rect = el.getBoundingClientRect();
+      const offset = 100;
+      if (rect.top < offset) {
+        window.scrollBy({ top: rect.top - offset, behavior: 'smooth' });
+      }
+    }, 100);
+  }
+}
 </script>
 </body>
 </html>
